@@ -5,7 +5,7 @@ class DataBase{
 
 
      $modelo= new Conexion();
-     $Conexion=$modelo-> get_conexion();
+     $conexion=$modelo-> get_conexion();
      $sql= "insert into Producto(nombre, descripcion, categoria, precio) values(:nombre, :descripcion, :categoria, :precio)";
      $statement = $Conexion->prepare($sql);
      $statement -> bindParam(':nombre',$nombre);
@@ -24,7 +24,7 @@ class DataBase{
      public function  consultarProducto($nombre,$descripcion,$categoria,$precio) {
          $array= null;
          $modelo= new Conexion();
-         $Conexion =$modelo -> get_conexion();
+         $conexion =$modelo -> get_conexion();
          $sql=" select * from producto";
          $statement = $Conexion->prepae(sql);
        
