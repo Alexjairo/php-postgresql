@@ -42,11 +42,14 @@ class DataBase{
          $statement-> bindParamn(':id',$id);
          
          if (!$statement){
+             return "el producto no existe";
+
+         }else{
+             
+         $statement -> execute();
+         return "el producto se ha eliminado correctamente";
 
          }
-         
-         
-         $statement -> execute();
 
      }
     }
