@@ -25,7 +25,7 @@ class DataBase{
          $array= null;
          $modelo= new Conexion();
          $Conexion =$modelo -> get_conexion();
-         $sql=" select * from producto";
+         $sql=" select * from producto order by id";
          $statement = $Conexion->prepare($sql);
          $statement -> execute();
          while ($resultado=$statement->fetch()){
