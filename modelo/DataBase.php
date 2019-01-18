@@ -24,7 +24,7 @@ class DataBase{
      public function  consultarProducto() {
          $array= null;
          $modelo= new Conexion();
-         $conexion =$modelo -> get_conexion();
+         $Conexion =$modelo -> get_conexion();
          $sql=" select * from producto";
          $statement = $Conexion->prepare(sql);
          $statement -> execute();
