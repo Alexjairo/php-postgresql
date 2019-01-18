@@ -26,7 +26,7 @@ class DataBase{
          $modelo= new Conexion();
          $conexion =$modelo -> get_conexion();
          $sql=" select * from producto";
-         $statement = $Conexion->prepae(sql);
+         $statement = $Conexion->prepare(sql);
        
      
      }
