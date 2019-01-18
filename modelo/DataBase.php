@@ -26,7 +26,7 @@ class DataBase{
          $modelo= new Conexion();
          $conexion =$modelo -> get_conexion();
          $sql=" select * from producto";
-         $statement = $Conexion->prepare(sql);
+         $statement = $conexion->prepare(sql);
          $statement -> executeJS();
          while ($resultado=$statement->fetch()){
              $array[]=$resultado;
