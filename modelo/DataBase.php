@@ -34,7 +34,9 @@ class DataBase{
        return $array;
      
      }
-     public function eliminarProducto
+     public function eliminarProducto(){
+         
+     }
     }
  
 ?>
