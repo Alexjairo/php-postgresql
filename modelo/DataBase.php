@@ -35,7 +35,11 @@ class DataBase{
      
      }
      public function eliminarProducto(){
-         
+         $modelo = new Conexion();
+         $conexion = $modelo -> get_conexion();
+         $sql="delete *from producto where id=:id";
+         $statement=$conexion-> prepare($sql);
+         $statement -> execute();
      }
     }
  
