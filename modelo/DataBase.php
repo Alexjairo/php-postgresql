@@ -19,9 +19,9 @@ class DataBase{
          return "la insercion se realizó con exito";
      }
  }
-}
+
  
-      function  consultarProducto() {
+     public function  consultarProducto() {
          $array= null;
          $modelo= new Conexion();
          $conexion =$modelo -> get_conexion();
