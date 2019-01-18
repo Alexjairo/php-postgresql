@@ -21,7 +21,7 @@ class DataBase{
  }
 }
  
-     public function  consultarProducto() {
+      function  consultarProducto() {
          $array= null;
          $modelo= new Conexion();
          $conexion =$modelo -> get_conexion();
