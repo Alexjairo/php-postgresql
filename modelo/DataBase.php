@@ -39,7 +39,15 @@ class DataBase{
          $conexion = $modelo -> get_conexion();
          $sql="delete *from producto where id=:id";
          $statement=$conexion-> prepare($sql);
+         $statement-> bindParamn(':id',$id);
+         
+         if (!$statement){
+
+         }
+         
+         
          $statement -> execute();
+
      }
     }
  
