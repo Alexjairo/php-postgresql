@@ -34,5 +34,6 @@ class DataBase{
        return $array;
      
      }
+    }
  
 ?>
