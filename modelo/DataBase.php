@@ -20,15 +20,19 @@ class DataBase{
      }
  }
 }
- class consultar{
-     public function  consultarProducto($nombre,$descripcion,$categoria,$precio) {
+ 
+     public function  consultarProducto() {
          $array= null;
          $modelo= new Conexion();
          $conexion =$modelo -> get_conexion();
          $sql=" select * from producto";
          $statement = $Conexion->prepare(sql);
-       
+         $statement -> executeJS();
+         while ($resultado=$statement->fetch()){
+             $array[]=$resultado;
+         }
+       return $array;
      
      }
- }
+ 
 ?>
