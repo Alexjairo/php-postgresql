@@ -7,7 +7,7 @@ class DataBase{
      $modelo= new Conexion();
      $conexion=$modelo-> get_conexion();
      $sql= "insert into Producto(nombre, descripcion, categoria, precio) values(:nombre, :descripcion, :categoria, :precio)";
-     $statement = $Conexion->prepare($sql);
+     $statement = $conexion->prepare($sql);
      $statement -> bindParam(':nombre',$nombre);
      $statement-> bindParam(':descripcion',$descripcion);
      $statement-> bindParam(':categoria',$categoria);
