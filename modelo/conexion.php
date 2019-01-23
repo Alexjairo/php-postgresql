@@ -1,12 +1,12 @@
 <?php
-class Conexion{
+class Conectar{
     public function get_conexion() {
         $user="postgres";
         $pass="pokemongo99";
         $host="localhost";
         $db="pedido";
-        $conexion= new PDO("pgsql:host=$host;dbname=$db",$user,$pass);
-    return $conexion;
+        $conectar= new PDO("pgsql:host=$host;dbname=$db",$user,$pass);
+    return $conectar;
     }
 }
 // $pruebacon=new Conexion();
