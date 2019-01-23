@@ -37,7 +37,7 @@ class DataBase{
      public function eliminarProducto($id){
          $modelo = new Conexion();
          $conexion = $modelo -> get_conexion();
-         $sql="delete *from producto where id=:id";
+         $sql="delete from producto where id=:id";
          $statement=$conexion-> prepare($sql);
          $statement-> bindParamn(':id',$id);
          
