@@ -52,6 +52,20 @@ class DataBase{
          }
 // JAIRO MOROCHO 23/01/2019
      }
+     public function  buscarProducto($nombre) {
+        $array= null;
+        $modelo= new Conexion();
+        $Conexion =$modelo -> get_conexion();
+        $nombre="%".$nombre. "%";
+        $sql=" select * from producto where nombre like :nombre order by id";
+        $statement = $Conexion->prepare($sql);
+        $statement -> execute();
+        while ($resultado=$statement->fetch()){
+            $array[]=$resultado;
+        }
+      return $array;
+    
+    }
     }
  
 ?>
