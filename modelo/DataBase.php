@@ -39,7 +39,7 @@ class DataBase{
          $conexion = $modelo -> get_conexion();
          $sql="delete from producto where id=:id";
          $statement=$conexion-> prepare($sql);
-         $statement-> bindParamn(':id',$id);
+         $statement-> bindParam(':id',$id);
          
          if (!$statement){
              return "el producto no existe";
