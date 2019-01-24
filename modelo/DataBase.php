@@ -56,9 +56,10 @@ class DataBase{
         $array= null;
         $modelo= new Conexion();
         $Conexion =$modelo -> get_conexion();
-        $nombre="%".$nombre. "%";
+        $nombre="%".$nombre."%";
         $sql=" select * from producto where nombre like :nombre order by id";
         $statement = $Conexion->prepare($sql);
+        $statement->bindParam('nombre',$nombre);
         $statement -> execute();
         while ($resultado=$statement->fetch()){
             $array[]=$resultado;
