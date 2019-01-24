@@ -50,7 +50,7 @@ class DataBase{
          return "el producto se ha eliminado correctamente";
 
          }
-
+// JAIRO MOROCHO 23/01/2019
      }
     }
  
