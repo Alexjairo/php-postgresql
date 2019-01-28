@@ -9,12 +9,12 @@ class Conexion{
     return $conexion;
     }
 }
-// $pruebacon=new Conexion();
-// $con = $pruebacon -> get_conexion();
-// if($con){
-//     echo "se conectó exitosamente";
+$pruebacon=new Conexion();
+$con = $pruebacon -> get_conexion();
+if($con){
+    echo "se conectó exitosamente";
 
-// }else{
-//     echo "Error";
-// }
+}else{
+    echo "Error";
+}
 ?>
