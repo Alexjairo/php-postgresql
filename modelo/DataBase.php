@@ -2,8 +2,6 @@
 class DataBase{
  public function insertarProducto($nombre,$descripcion,$categoria,$precio){
 
-
-
      $modelo= new Conexion();
      $conexion=$modelo-> get_conexion();
      $sql= "insert into Producto(nombre, descripcion, categoria, precio) values(:nombre, :descripcion, :categoria, :precio)";
