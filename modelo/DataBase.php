@@ -77,7 +77,7 @@ class DataBase{
             $array[]=$resultado;
             }
             return $array
-        }
+        
     
     }
  
