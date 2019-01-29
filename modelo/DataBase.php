@@ -80,5 +80,20 @@ class DataBase{
         
     
     }
+    public function modificarProd($campo,$valor,$id){
+
+        $modelo= new Conexion();
+        $conexion=$modelo-> get_conexion();
+        $sql= "update producto set $campo = :valor where id=:id";
+        $statement = $conexion->prepare($sql);
+        $statement -> bindParam(':valor',$valor);
+        $statement-> bindParam(':id',$id);
+        if(!$statement){
+            return "Error no se puede realizar la carga";
+        }else{
+            $statement-> execute();
+            return "la actualización se realizó con exito";
+        }
+    }
 } 
 ?>
