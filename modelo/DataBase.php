@@ -76,7 +76,7 @@ class DataBase{
         while($resultado= $statement -> fetch()){
             $array[]=$resultado;
             }
-            return $array
+            return $array;
         
     
     }
