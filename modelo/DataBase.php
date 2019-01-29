@@ -78,7 +78,7 @@ class DataBase{
             }
             return $array
         }
-    }
+    
     }
  
 ?>
