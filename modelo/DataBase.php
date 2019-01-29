@@ -65,6 +65,20 @@ class DataBase{
       return $array;
     
     }
+    public function recuperarProd($id){
+        $array= null;
+        $modelo=new Conexion();
+        $conexion= $modelo->get_conexion();
+        $sql ="select * from producto where id=:id";
+        $statement=$conexion->prepare($sql);
+        $statement-> bindParam(':id',$id);
+        $statement->execute();
+        while($resultado= $statement -> fetch()){
+            $array[]=$resultado;
+            }
+            return $array
+        }
+    }
     }
  
 ?>
